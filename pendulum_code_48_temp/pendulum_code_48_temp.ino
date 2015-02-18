@@ -1,4 +1,5 @@
 
+//testing to see if github works
 /* TEMP  note to SElf
 position = amplitude*cos(Time*360*Period)     //I do believe
 
