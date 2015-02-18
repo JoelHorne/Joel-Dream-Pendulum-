@@ -46,6 +46,7 @@ const float pi = 3.141592;
 
 const int  interuptPin1 =  2;
 const int interuptPin2 =3;
+const int letsSeeIfThisWorks = 1;
 
 
 int maxAccel= 3000;  //500;   //1000;  //0 to 3200          //faster maxAccel so that idealPos can control speed
