@@ -1174,6 +1174,7 @@ void loop()
               setMotorSpeedPercent(mSpeed);
                ETout.sendData(ADDRESS);            //send data to ADDRESS
                printValues();
+               printStruct();
        }   
         
 }

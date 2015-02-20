@@ -561,7 +561,7 @@ void updateVars()
 {
     timePrev2=timePrev;
     timePrev=time1;
-    time1=millis();
+    time1=dataIn.time1 - timeOffset;
     updatePos();
     updateVel();
     updateStructs();
@@ -1172,6 +1172,7 @@ void loop()
               setMotorSpeedPercent(mSpeed);
                ETout.sendData(ADDRESS);            //send data to ADDRESS
                printValues();
+               printStruct();
        }   
         
 }
