@@ -66,6 +66,7 @@ int mAmp = 150;        // value read from pot.  amplitude of wave
 long rotation=100;  // counts number of rotations    //ofset intitial value to avoid problems when this goes negative
 long offset = rotation * 1000;   //initial position offset determined by initial rotation value,   meant to avoid problems when negative
 long posActual;   //value equal to offsetPos-offset;
+long timeOffset=0;
 
 long idealCenter = 500 + offset;      // determines center of pendulum motion
 long center= idealCenter;   // this is the measured center of swing
@@ -561,7 +562,8 @@ void updateVars()
 {
     timePrev2=timePrev;
     timePrev=time1;
-    time1=dataIn.time1 - timeOffset;
+    timeOffset=millis()-dataIn.time1;
+    time1=millis() - timeOffset;
     updatePos();
     updateVel();
     updateStructs();
